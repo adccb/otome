@@ -11,12 +11,10 @@ const defaultHistoryProps: HistoryProps = {
 }
 
 export const History = ({ onClick } = defaultHistoryProps) => {
-  const historyItems = ['one', 'two', 'three']
-
   return (
     <aside className="History">
       <ul>
-        {historyItems.map(chapter => (
+        {[].map(chapter => (
           <li key={chapter} onClick={() => onClick(chapter)}>
             {chapter}
           </li>

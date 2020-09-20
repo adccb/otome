@@ -1,25 +1,31 @@
 import React from 'react'
 
+import type { Line } from '../../types'
+import { isOptionLine, defaultLine } from '../../types'
 import './index.css'
 
 type InputProps = {
-  options: string[]
+  line: Line
   onClick: Function
 }
 
 const defaultInputProps: InputProps = {
-  options: [],
+  line: defaultLine,
   onClick: () => null,
 }
 
-export const Input = ({ options, onClick } = defaultInputProps) => (
+export const Input = ({ line, onClick } = defaultInputProps) => (
   <div className="Input">
     <ul>
-      {options.map(opt => (
-        <li key={opt} onClick={() => onClick(opt)}>
-          {opt}
-        </li>
-      ))}
+      {isOptionLine(line) ? (
+        Object.keys(line.options).map(opt => (
+          <li key={opt} onClick={() => onClick(opt)}>
+            {opt}
+          </li>
+        ))
+      ) : (
+        <li onClick={() => onClick()}>Continue...</li>
+      )}
     </ul>
   </div>
 )
