@@ -1,0 +1,33 @@
+[
+  { "id": "n1", "voice": "Narrator", "line": "Welcome to the app." },
+  {
+    "id": "c1",
+    "voice": "Chloe",
+    "line": "Now, like, fuck me or something?",
+    "options": {
+      "your place or mine?": [
+        {
+          "id": "c2",
+          "voice": "Chloe",
+          "line": "..."
+        },
+        {
+          "id": "c3",
+          "voice": "Chloe",
+          "line": "cool"
+        },
+        {
+          "id": "l1",
+          "line": "@n1"
+        }
+      ],
+      "uh i'm ace actually": [
+        {
+          "id": "c4",
+          "voice": "Chloe",
+          "line": "oh rad"
+        }
+      ]
+    }
+  }
+]
